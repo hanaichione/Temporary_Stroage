@@ -38,6 +38,7 @@
 				<value>com.dto.GoodsDTO</value>
 				<value>com.dto.MemberDTO</value>
 				<value>com.dto.OrderDTO</value>				
+				<value>com.dto.QaDTO</value>				
 			</list>		
 		</property>
 	</bean>	

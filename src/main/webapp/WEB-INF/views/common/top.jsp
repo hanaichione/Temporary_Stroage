@@ -11,4 +11,5 @@
 	<a href="loginCheck/logout">로그아웃</a>&nbsp;<!--  -->
 	<a href="loignCheck/myPage">mypage</a>&nbsp;
 	<a href="loginCheck/cartList">장바구니</a>&nbsp;
+	<a href="loginCheck/user_qaList">1:1문의</a>&nbsp;
 </c:if>
