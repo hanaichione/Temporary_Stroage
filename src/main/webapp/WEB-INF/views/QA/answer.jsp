@@ -2,6 +2,19 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+	$(function () {
+		$("#answerBtn").on("click", function () {
+			if ($("#answer").val().length == 0) {
+				alert("답변을 작성해 주세요.");
+				$("#answer").focus();
+				return false;
+			}
+		})
+	})
+</script>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +24,7 @@
 </head>
 <body>
 	<form action="answerUpdate">
-	<input type="hidden" name="num" value="${manager_qdto.num}">
+	<input type="hidden" name="num" id="num" value="${manager_qdto.num}">
 		<table border="1">
 			<tr>
 				<th>문의번호</th>

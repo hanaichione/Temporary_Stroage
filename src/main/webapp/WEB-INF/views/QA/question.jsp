@@ -6,7 +6,31 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 
-
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+	$(function() {	
+		$("#title").on("click", function () {
+			$("#title").val("");
+		})
+		
+		$("#enroll").on("click", function() {
+			if ($("#category").val() == "문의 유형을 선택해 주세요") {
+				alert("문의 유형을 선택해 주세요.");
+				return false;
+			}
+			if ($("#title").val() == "제목을 입력해주세요") {
+				alert("제목을 입력해 주세요.");
+				return false;
+			}
+			// 등록 버튼 클릭시에 제목 또는 내용이 null인 경우 전송 금지
+			if ($("#contents").val().length==0 || $("#title").val().length==0) {
+				alert("제목 또는 내용은 비워둘 수 없습니다.");
+				return false;
+			}
+		})
+	})
+</script>
 
 </head>
 <body>
@@ -23,7 +47,8 @@
 			<td>
 				<select name="category" id="category">
 					<option selected>문의 유형을 선택해 주세요</option>
-					<option>주문/결제/반품/교환문의</option>
+					<option>주문/결제문의</option>
+					<option>반품/교환문의</option>
 					<option>상품문의</option>
 					<option>배송문의</option>
 					<option>기타문의</option>

@@ -14,37 +14,37 @@ public class QaService {
 	@Autowired
 	QaDAO dao;
 
-	public List<QaDTO> selectAll(String userid) {
+	public List<QaDTO> selectAll(String userid) throws Exception {
 		List<QaDTO> list = dao.selectAll(userid);
 		return list;
 	}
 
-	public int addQ(QaDTO qdto) {
+	public int addQ(QaDTO qdto) throws Exception {
 		int n = dao.addQ(qdto);
 		return n;
 	}
 
-	public List<QaDTO> manager_selectAll() {
+	public List<QaDTO> manager_selectAll() throws Exception {
 		List<QaDTO> list = dao.manager_selectAll();
 		return list;
 	}
 
-	public QaDTO selectOne(int num) {
+	public QaDTO selectOne(int num) throws Exception {
 		QaDTO qdto = dao.selectOne(num);
 		return qdto;
 	}
 
-	public int answerUpdate(Map<Integer, String> map) {
+	public int answerUpdate(Map<Integer, String> map) throws Exception {
 		int n = dao.answerUpdate(map);
 		return n;
 	}
 
-	public int updateQuestion(QaDTO qdto) {
+	public int updateQuestion(QaDTO qdto) throws Exception {
 		int n = dao.updateQuestion(qdto);
 		return n;
 	}
 
-	public int deleteQuestion(int num) {
+	public int deleteQuestion(int num) throws Exception {
 		int n = dao.deleteQuestion(num);
 		return n;
 	}
